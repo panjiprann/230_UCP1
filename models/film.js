@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const Komik = sequelize.define("film", {
+  const Film = sequelize.define("Film", {
     id:{
         type: DataTypes.INTEGER,
         autoIncrement: true,
@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     sutradara: {
         type: DataTypes.STRING,
     },
-    tahun_terbit: {
+    terbit: {
         type: DataTypes.STRING,
     },
     genre: {
@@ -22,5 +22,5 @@ module.exports = (sequelize, DataTypes) => {
     },
  });
 
-  return film;
+  return Film;
 }

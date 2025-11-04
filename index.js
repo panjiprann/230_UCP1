@@ -44,7 +44,7 @@ app.put('/films/:id', async (req, res) => {
     const data = req.body;
 
     try {
-        const film = await db.film.findByPk(id);
+        const film = await db.Film.findByPk(id);
         if (!film) {
             return res.status(404).send({ message: 'film not found' });
         }
@@ -59,7 +59,7 @@ app.put('/films/:id', async (req, res) => {
 app.delete('/films/:id', async (req, res) => {
     const id = req.params.id;
     try {
-        const komik = await db.film.findByPk(id);
+        const komik = await db.Film.findByPk(id);
         if (!film) {
             return res.status(404).send({ message: 'film not found' });
         }
